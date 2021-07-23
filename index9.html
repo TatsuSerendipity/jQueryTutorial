@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQueryの練習</title>
+    </head>
+    <body>
+        <h1>submitイベント</h1>
+        <form methd="POST" action="xxxx.php" target="_blank">
+            <input id="text_input" type="text" value="hello" />
+            <input type="submit" />
+        </form>
+
+        <script src="./jquery-3.6.0.min.js"></script>
+        <script>
+            $(function(){
+                $("form").submit(
+                    function(e){
+                        if(confirm("送信しますか")){
+                            var text = $("#text_input").val();
+                            if(text === ""){
+                                e.preventDefault();
+                                console.log("送信がキャンセルされました");
+                            } else {
+                                console.log("送信しました");
+                                console.log(text);
+                            }
+                        } else {
+                            e.preventDefault();
+                            console.log("送信がキャンセルされました");
+                        }
+                    }
+                );
+            });
+        </script>
+    </body>
+</html>

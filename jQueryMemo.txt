@@ -1,0 +1,119 @@
+$(document).ready{
+    function(){
+        //なにかしらのコード
+    }
+}
+⇢HTMLが読み込み終わったら//内を実行
+
+$(function(){
+    //↑をこのように省略可
+});
+
+タグ名⇢$(“div”)
+ID⇢$(“#id”)
+クラス名⇢$(“.class_name”)
+
+階層セレクタとは要素の親子関係で絞り込むこと
+ー　$(基本セレクタ　結合子　基本セレクタ)
+・結合子
+ー　(スペース)
+⇢ ある要素の配下の要素
+ー　>
+⇢　ある要素の直下の要素
+ー　+
+⇢ ある要素の次の要素
+ー　~
+⇢ ある要素以降のすべての要素
+
+フィルタとは取得した要素をさらに絞り込むための条件
+ー　取得した要素の順番
+　ー　:first, :last
+　⇢　最初の要素、最後の要素
+　ー　:even, :odd
+　⇢　偶数の要素、奇数の要素
+　ー　:eq(index), :lt(index), :gt(index)
+　⇢　index番目の要素を取り出す、index番目よりも前方の要素、index番目よりも後方の要素
+ http://arkgame.com/?p=42992
+ー　条件を満たす子要素の有無
+　ー　:has(selector)
+　https://www.jquerystudy.info/reference/selectors/has.html
+ー　内容の有無
+　ー　:empty, :parent
+　ー　:contains(text)
+　empty:https://www.jquerystudy.info/reference/selectors/empty.html
+　parent:https://www.jquerystudy.info/reference/selectors/parent.html
+　contains:()が含まれる要素
+
+属性フィルタとは条件を満たす属性や属性値で絞り込む
+ー　$('要素名[属性]')
+　　https://www.jquerystudy.info/reference/selectors/attribute.html
+
+子要素・親要素の取得
+ー　prev, prevAll, next, nextAll
+ー　parent, parents, children
+
+要素内のテキストの操作
+ー　text()
+⇢　指定された要素の中身のみを指定
+ー　html()
+⇢　指定された要素のタグごと指定
+フォーム要素の値の操作
+ー　val()
+⇢　指定された要素のvalue属性を指定
+
+要素の挿入
+ー　append()
+　ー　選択した要素の末尾にコンテンツを挿入
+ー　prepend()
+　ー　選択した要素の先頭にコンテンツを挿入
+ー　before()
+　ー　選択した要素の前にコンテンツを挿入
+ー　after()
+　ー　選択した要素の後にコンテンツを挿入
+要素の置換
+ー　replaceWith()
+　ー　選択した要素と置換
+要素の削除
+ー　empty()
+　ー　選択した要素の子要素を全て削除
+　ー　選択した要素自身は変更しない
+ー　remove()
+　ー　選択した要素とその子要素を全て削除
+
+表示
+ー　show()
+非表示
+ー　hide()
+表示、もしくは非表示
+ー　toggle()
+⇢　()の中はミリ秒
+
+スライド
+ー　要素の高さを徐々に変更
+　ー　slideDown()
+　ー　slideUp()
+　ー　slideToggle()
+フェード
+ー　要素の透明度を徐々に変更
+　ー　fadeIn()
+　ー　fadeOut()
+　ー　fadeTo()
+
+click()
+　ー　クリック時のイベント処理を定義する
+　ー　$('a').click(function(){});
+hover(over, out)
+　ー　ホバー時のイベント処理を定義する
+　ー　第一引数は、マウスカーソルが要素の上に乗った時のイベント処理
+　ー　第二引数は、マウスカーソルが要素から外れた時のイベント処理
+　ー　$('a').hover(function(){}, function(){});
+
+focus()
+　ー　要素にフォーカスが移った
+blur()
+　ー　要素からフォーカスが外れた
+change()
+　ー　要素の値を変更した
+
+submit()
+　ー　対象のフォームがsubmitされた

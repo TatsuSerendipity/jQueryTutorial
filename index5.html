@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQueryの練習</title>
+    </head>
+    <body>
+        <h1>タイトル</h1>
+        <div>
+            <p>段落１</p>
+            <p>段落２</p>
+        </div>
+
+        <script src="./jquery-3.6.0.min.js"></script>
+        <script>
+            $(function(){
+                //$("p:lt(2)").before("<p>(変更)</p>")
+                //$("h1").replaceWith("<b>こんにちは!</b>");
+                $("div").remove();
+            });
+        </script>
+    </body>
+</html>
